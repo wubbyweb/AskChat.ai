@@ -11,27 +11,22 @@
 
 <body>
     <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
+        }
 
-
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-
-.container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-}
-        
-
-        </style>
+        .container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    </style>
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
@@ -56,19 +51,20 @@
     </nav>
 
     <div class="container">
-            
-            
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ask question to the chat">
-            &nbsp;
-            <button type="button" class="btn btn-success">Ask</button>
 
-      </div>
-      
+        <form action="{% url 'result' %}">
+            {% csrf_token %}
+            <input type="text" name="user_ask_inputbox" placeholder="Asks question to your chat" size="100"><br><br>
+            <center><input type="submit" class="btn btn-success" value="Ask"></center>
+        </form>
+
+
+    </div>
+
 
     <div>
-        
+
     </div>
-    {% csrf_token %}
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
