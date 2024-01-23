@@ -17,8 +17,20 @@ from django.contrib import admin
 from django.urls import path
 from . import views
 
+
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", views.home,name='home'),
     path("result/", views.result,name='result'),
 ]
+
+def startup():
+    print("DEBUG: Executing startup")
+    chat_content = open('_chat.txt',encoding='utf-8').read()
+    print("DEBUG: Loaded file contents")
+    return chat_content
+
+startup()
+
+
+

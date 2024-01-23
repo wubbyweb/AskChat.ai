@@ -1,4 +1,5 @@
 from transformers import AutoModelForQuestionAnswering, AutoTokenizer, pipeline
+from . import urls
 
 def model_response():
     model_name = "deepset/roberta-base-squad2"
@@ -6,8 +7,8 @@ def model_response():
     # a) Get predictions
     nlp = pipeline('question-answering', model=model_name, tokenizer=model_name)
     QA_input = {
-        'question': 'Why is model conversion important?',
-        'context': 'The option to convert models between FARM and transformers gives freedom to the user and let people easily switch between frameworks.'
+        'question': 'What does Nimish say about good debt?',
+        'context': urls.startup()
     }
     res = nlp(QA_input)
 
