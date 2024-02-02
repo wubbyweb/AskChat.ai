@@ -2,7 +2,7 @@ from transformers import AutoModelForQuestionAnswering, AutoTokenizer, pipeline
 from . import urls
 
 def model_response():
-    model_name = "deepset/roberta-base-squad2"
+    model_name = "timpal0l/mdeberta-v3-base-squad2"
 
     # a) Get predictions
     nlp = pipeline('question-answering', model=model_name, tokenizer=model_name)

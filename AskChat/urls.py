@@ -26,7 +26,7 @@ urlpatterns = [
 
 def startup():
     print("DEBUG: Executing startup")
-    chat_content = open('_chat.txt',encoding='utf-8').read()
+    chat_content = open('new.txt',encoding='utf-8').read()
     print("DEBUG: Loaded file contents")
     return chat_content
 
