@@ -7,7 +7,7 @@ def model_response():
     # a) Get predictions
     nlp = pipeline('question-answering', model=model_name, tokenizer=model_name)
     QA_input = {
-        'question': 'What does Nimish say about good debt?',
+        'question': 'What this say about good debt?',
         'context': urls.startup()
     }
     res = nlp(QA_input)
