@@ -12,7 +12,7 @@ def model_response(user_ask_value):
     }
     res = nlp(QA_input)
 
-    # b) Load model & tokenizer
+    # Load model & tokenizer
     model = AutoModelForQuestionAnswering.from_pretrained(model_name)
     tokenizer = AutoTokenizer.from_pretrained(model_name)
 
